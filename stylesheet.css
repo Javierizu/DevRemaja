@@ -1,0 +1,169 @@
+body {
+	font-family: "poppins";
+  background-color: #e5e5f7;
+  background-image: radial-gradient(#04AA6D 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/*=====================================================================================================*/
+/* Add a black background color to the top navigation */
+.top-nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  overflow: hidden;
+  z-index: 1000;
+}
+/* Style the links inside the navigation bar */
+.top-nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 16px;
+}
+/* Change the color of links on hover */
+.top-nav a:hover {
+  transition: 0.6s;
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.top-nav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/*=====================================================================================================*/
+.main-con {
+  border-bottom: #333 solid 1px;
+	padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around ;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.main-con h1 {
+	font-size: 50px;
+}
+.main-con p {
+  text-align: justify;
+}
+
+.main-con-text {
+  display: inline-block;
+  width: 45%;
+}
+
+button {
+	background-color: #04AA6D; /* Green */
+	border: none;
+	color: white;
+	padding: 18px 36px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+button:hover {
+  transition: 0.6s;
+  background-color: #ddd;
+  color: black;
+	}
+
+.main-con-img {
+  margin: auto;
+  display: inline-block;
+  width: 50%;
+}
+
+.main-con-img img {
+  display: block;
+  margin:auto;
+  width: 80%;
+  height: max-content;
+  border-radius: 10px;
+}
+
+/*=====================================================================================================*/
+.Tentang-Saya {
+  border-bottom: #333 solid 1px;
+  padding: 5%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.Tentang-Saya h2 {
+  font-size: 40px;
+  display: inline-block;
+  margin: auto;
+}
+
+.Tentang-Saya-main {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Tentang-Saya p {
+  text-align: justify;
+  padding: 3%;
+}
+
+.Tentang-Saya-text {
+  background-color: #04AA6D;
+  margin: 2%;
+  width: 550px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*====================================================================================================*/
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  * {
+    text-size-adjust: 90%;
+  }
+  .main-con {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .main-con-text, .main-con-img {
+      width: 100%;
+  }
+
+  .Tentang-Saya-main {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .Tentang-Saya-text {
+      width: 90%;
+  }
+
+  /* Center the div on smaller screens */
+  .top-nav, .main-con, .Tentang-Saya {
+      margin: 0 auto;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
